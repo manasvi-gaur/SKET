@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/dashboard_profile_homefrag"
+        android:layout_width="59dp"
+        android:layout_height="59dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/img_3"
+        app:civ_border_color="#FF000000"
+        app:civ_border_width="2dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/dashboard_name_homefrag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:fontFamily="@font/amarante"
+        android:text="Name"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="@+id/dashboard_profile_homefrag"
+        app:layout_constraintStart_toEndOf="@+id/dashboard_profile_homefrag"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.25" />
+
+    <TextView
+        android:id="@+id/dashboard_username_homefrag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="About"
+        app:layout_constraintStart_toStartOf="@+id/dashboard_name_homefrag"
+        app:layout_constraintTop_toBottomOf="@+id/dashboard_name_homefrag" />
+
+    <ImageView
+        android:id="@+id/dashboard_more_homefrag"
+        android:layout_width="36dp"
+        android:layout_height="36dp"
+        android:layout_marginEnd="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/dashboard_profile_homefrag"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/dashboard_profile_homefrag"
+        app:srcCompat="@drawable/baseline_more_vert_24" />
+
+    <com.makeramen.roundedimageview.RoundedImageView
+        android:id="@+id/homfragpostimage"
+        android:layout_width="0dp"
+        android:layout_height="200dp"
+
+        android:layout_marginTop="16dp"
+        android:scaleType="centerCrop"
+
+        android:src="@drawable/img_6"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/dashboard_profile_homefrag"
+
+        app:riv_corner_radius="10dip"
+        app:riv_mutate_background="true" />
+
+    <ImageView
+        android:id="@+id/shareit"
+        android:layout_width="34dp"
+        android:layout_height="28dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        app:layout_constraintStart_toEndOf="@+id/comment"
+        app:layout_constraintTop_toBottomOf="@+id/homfragpostimage"
+        app:srcCompat="@drawable/baseline_share_24" />
+
+    <ImageView
+        android:id="@+id/dashboard_bookmark_homefrag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/homfragpostimage"
+        app:srcCompat="@drawable/baseline_bookmark_border_24" />
+
+    <TextView
+        android:id="@+id/postdiscription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="8dp"
+        android:text="TextView"
+        android:visibility="gone"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homfragpostimage" />
+
+    <TextView
+        android:id="@+id/like"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="32dp"
+        android:drawableLeft="@drawable/heart1"
+        android:drawablePadding="10dp"
+        android:gravity="center"
+        android:text="135"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/homfragpostimage" />
+
+    <TextView
+        android:id="@+id/comment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="32dp"
+        android:drawableLeft="@drawable/baseline_chat_bubble_outline_24"
+        android:drawablePadding="10dp"
+        android:gravity="center"
+        android:text="357 "
+        app:layout_constraintStart_toEndOf="@id/like"
+        app:layout_constraintTop_toBottomOf="@+id/homfragpostimage" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
